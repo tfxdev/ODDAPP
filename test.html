@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/env.js"></script>
+  <script src="js/cal.js"></script>
+  <!-- <script src="js/custom.js"></script> -->
+  <script src="js/custom-v3.js"></script>
+
+
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      dateFormat: "yy-mm-dd",
+      minDate:0,
+      maxDate:'+30D',
+      defaultDate: day_to_increase,
+      beforeShowDay:disableHoliday,
+
+    });
+    // $("#datepicker").datepicker("setDate", '2022-09-13');
+  } );
+  </script>
+</head>
+<body>
+ 
+<p>Date: <div id="datepicker"></div> </p>
+ 
+ 
+</body>
+</html>
